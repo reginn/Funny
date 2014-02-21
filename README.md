@@ -1,4 +1,5 @@
-Funny
-=====
+# Funny
 
-(Modder側の)お遊びMod
+お遊びMod
+
+開発中
