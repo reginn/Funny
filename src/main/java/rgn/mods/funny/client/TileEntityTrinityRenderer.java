@@ -14,12 +14,9 @@ public class TileEntityTrinityRenderer extends TileEntitySpecialRenderer
 {
 	private IModelCustom trinityBlockModel;
 
-	private static final ResourceLocation modelResourceLocation   = new ResourceLocation("funny:obj/tri.obj");
-	private static final ResourceLocation textureResourceLocation = new ResourceLocation("funny:textures/models/trinity.png");
-
 	public TileEntityTrinityRenderer()
 	{
-		trinityBlockModel = AdvancedModelLoader.loadModel(modelResourceLocation);
+		trinityBlockModel = AdvancedModelLoader.loadModel(TrinityResourceLocations.trinityModel);
 	}
 
 	@Override
@@ -30,7 +27,7 @@ public class TileEntityTrinityRenderer extends TileEntitySpecialRenderer
 
 	private void doRender(TileEntity tileEntity, double x, double y, double z, float partialTickTime)
 	{
-		bindTexture(textureResourceLocation);
+		bindTexture(TrinityResourceLocations.trinityTexture);
 		GL11.glPushMatrix();
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		GL11.glTranslatef((float)x + 0.5F, (float)y + 0.5F, (float)z + 0.5F);

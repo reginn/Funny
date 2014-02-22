@@ -1,3 +1,9 @@
 tile.blockTrinity.name=Triangular Prism Block
 
+item.itemTrinityBoat.name=Trinity Boat
+item.itemTrinityCart.name=Trinity Cart
+
+entity.entityTrinityBoat.name=Trinity Boat
+entity.entityTrinityCart.name=Trinity Cart
+
 itemGroup.tabTrinity=Trinity

@@ -2,8 +2,9 @@ package rgn.mods.funny.client;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
-import rgn.mods.funny.CommonProxy;
-import rgn.mods.funny.TileEntityTrinityBlock;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraftforge.client.MinecraftForgeClient;
+import rgn.mods.funny.*;
 
 public class ClientProxy extends CommonProxy
 {
@@ -14,9 +15,12 @@ public class ClientProxy extends CommonProxy
 	}
 
 	@Override
-	public void registerBlockRenderingHandler()
+	public void registerRenderingHandler()
 	{
 		RenderingRegistry.registerBlockHandler(new TrinityBlockRenderingHandler());
+		RenderingRegistry.registerEntityRenderingHandler(EntityTrinityBoat.class, new RenderTrinityBoat());
+		RenderingRegistry.registerEntityRenderingHandler(EntityTrinityCart.class, new RenderTrinityCart());
+		//MinecraftForgeClient.registerItemRenderer(TrinityCore.itemTrinityBoat, new ItemTrinityRenderer());
 	}
 
 	@Override

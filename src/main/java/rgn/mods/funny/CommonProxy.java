@@ -9,7 +9,7 @@ public class CommonProxy
 		return 0;
 	}
 
-	public void registerBlockRenderingHandler() {}
+	public void registerRenderingHandler() {}
 
 	public void registerTileEntity()
 	{
