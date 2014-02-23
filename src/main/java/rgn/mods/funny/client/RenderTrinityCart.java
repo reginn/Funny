@@ -24,25 +24,6 @@ public class RenderTrinityCart extends Render
 	{
 		GL11.glPushMatrix();
 
-		/*
-		GL11.glTranslatef((float) x, (float) y + 0.1F, (float) z);
-		GL11.glRotatef(180.0F - par8, 0.0F, 1.0F, 0.0F);
-		float f2 = (float) entityTrinityBoat.getTimeSinceHit() - par9;
-		float f3 = entityTrinityBoat.getDamageTaken() - par9;
-
-		if (f3 < 0.0F)
-		{
-			f3 = 0.0F;
-		}
-
-		if (f2 > 0.0F)
-		{
-			GL11.glRotatef(MathHelper.sin(f2) * f2 * f3 / 10.0F * (float) entityTrinityBoat.getForwardDirection(), 1.0F, 0.0F, 0.0F);
-		}
-
-		GL11.glScalef(0.5F, 0.5F, 0.5F);
-		GL11.glTranslatef(-0.5F, 0.0F, 0.0F);
-		*/
 		long i = (long) entityTrinityCart.getEntityId() * 493286711L;
 		i = i * i * 4392167121L + i * 98761L;
 		float f2 = (((float) (i >> 16 & 7L) + 0.5F) / 8.0F - 0.5F) * 0.004F;
@@ -100,25 +81,6 @@ public class RenderTrinityCart extends Render
 			GL11.glRotatef(MathHelper.sin(f7) * f7 * f8 / 10.0F * (float) entityTrinityCart.getRollingDirection(), 1.0F, 0.0F, 0.0F);
 		}
 
-		/*
-		int k = entityTrinityCart.getDisplayTileOffset();
-		Block block = entityTrinityCart.func_145820_n();
-		int j = entityTrinityCart.getDisplayTileData();
-		*/
-		/*
-		if (block.getRenderType() != -1)
-		{
-			GL11.glPushMatrix();
-			this.bindTexture(TextureMap.locationBlocksTexture);
-			float f6 = 0.75F;
-			GL11.glScalef(f6, f6, f6);
-			GL11.glTranslatef(0.0F, (float) k / 16.0F, 0.0F);
-			this.func_147910_a(entityTrinityCart, par9, block, j);
-			GL11.glPopMatrix();
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-			this.bindEntityTexture(entityTrinityCart);
-		}
-		*/
 		GL11.glScalef(0.5F, 0.5F, 0.5F);
 		this.bindEntityTexture(entityTrinityCart);
 		this.trinityModel.renderAll();

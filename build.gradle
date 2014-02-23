@@ -2,6 +2,10 @@ tasks.withType(Compile) {
     options.encoding = 'UTF-8'
 }
 
+dependencies {
+    compile 'org.lwjgl.lwjgl:lwjgl:2.9.0'
+}
+
 sourceSets.main {
     java.srcDirs project.projectDir.name
     resources.srcDirs project.projectDir.name
