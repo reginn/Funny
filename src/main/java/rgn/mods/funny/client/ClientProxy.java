@@ -5,6 +5,7 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 import rgn.mods.funny.CommonProxy;
 import rgn.mods.funny.EntityTrinityBoat;
 import rgn.mods.funny.EntityTrinityCart;
+import rgn.mods.funny.EntityTrinityMob;
 import rgn.mods.funny.TileEntityTrinityBlock;
 
 public class ClientProxy extends CommonProxy
@@ -21,6 +22,7 @@ public class ClientProxy extends CommonProxy
 		RenderingRegistry.registerBlockHandler(new TrinityBlockRenderingHandler());
 		RenderingRegistry.registerEntityRenderingHandler(EntityTrinityBoat.class, new RenderTrinityBoat());
 		RenderingRegistry.registerEntityRenderingHandler(EntityTrinityCart.class, new RenderTrinityCart());
+		RenderingRegistry.registerEntityRenderingHandler(EntityTrinityMob.class,  new RenderTrinityMob());
 	}
 
 	@Override

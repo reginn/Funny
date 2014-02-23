@@ -4,6 +4,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -13,10 +14,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.dispenser.BehaviorDefaultDispenseItem;
 import net.minecraft.dispenser.IBlockSource;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 
 @Mod(modid = TrinityModInfo.MODID, name = TrinityModInfo.NAME, version = TrinityModInfo.VERSION)
 public class TrinityCore
@@ -77,6 +80,9 @@ public class TrinityCore
 
 		EntityRegistry.registerModEntity(EntityTrinityBoat.class, "entityTrinityBoat", 0, this, 250, 1, true);
 		EntityRegistry.registerModEntity(EntityTrinityCart.class, "entityTrinityCart", 1, this, 250, 1, true);
+		EntityRegistry.registerModEntity(EntityTrinityMob.class,  "entityTrinityMob",  2, this, 250, 1, true);
+
+		//EntityRegistry.addSpawn(EntityTrinityMob.class, 50, 1, 4, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.plains});
 
 		BlockDispenser.dispenseBehaviorRegistry.putObject(itemTrinityBoat, new BehaviorDefaultDispenseItem()
 		{
